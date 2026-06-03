@@ -211,12 +211,11 @@ function App() {
 
       {route === 'home' ? (
         <section className="landing-panel">
-          <div className="landing-copy">
+          <div className="landing-copy simple-home">
             <p className="eyebrow">Legal Documents</p>
-            <h1>Clarity for every learner touchpoint.</h1>
+            <h1>Simple access to Ling Craft policies.</h1>
             <p className="lede">
-              Review how Ling Craft manages user data, connected services, AI features, and
-              the rules that govern product usage.
+              Read the privacy policy and terms of use in one place.
             </p>
             <div className="cta-row">
               <button
@@ -224,14 +223,14 @@ function App() {
                 className="cta-primary"
                 onClick={() => navigateTo('/privacy', setRoute)}
               >
-                Open Privacy Policy
+                Privacy Policy
               </button>
               <button
                 type="button"
                 className="cta-secondary"
                 onClick={() => navigateTo('/terms', setRoute)}
               >
-                Open Terms of Use
+                Terms of Use
               </button>
             </div>
           </div>
