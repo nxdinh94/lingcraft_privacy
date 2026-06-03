@@ -165,6 +165,28 @@
   align-items: start;
 }
 
+.support-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 20px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.support-card {
+  border: 1px solid var(--line);
+  border-radius: 32px;
+  background: var(--panel);
+  backdrop-filter: blur(14px);
+  padding: 32px;
+  box-shadow: 0 24px 56px rgba(40, 22, 8, 0.06);
+}
+
+.support-hero .lede {
+  max-width: 34rem;
+}
+
 .document-sidebar {
   position: sticky;
   top: 28px;
@@ -267,6 +289,7 @@
   }
 
   .landing-copy,
+  .support-card,
   .document-sidebar,
   .document-card {
     padding: 24px;
