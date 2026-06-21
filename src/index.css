@@ -22,6 +22,7 @@
   background:
     radial-gradient(circle at top, rgba(213, 138, 58, 0.16), transparent 34%),
     linear-gradient(180deg, #fbf7f1, var(--page-bg));
+  background-color: var(--page-bg);
   background-attachment: fixed;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -46,6 +47,7 @@
     background:
       radial-gradient(circle at top, rgba(224, 139, 58, 0.12), transparent 38%),
       linear-gradient(180deg, #1b1614, var(--page-bg));
+    background-color: var(--page-bg);
     background-attachment: fixed;
   }
 }
