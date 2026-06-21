@@ -6,6 +6,11 @@
   --body: #51453d;
   --muted: #786858;
   --accent: #a45a17;
+  --accent-rgb: 164, 90, 23;
+  --code-bg: rgba(16, 63, 81, 0.08);
+  --code-color: #103f51;
+  --card-shadow: rgba(72, 52, 31, 0.06);
+
   --heading: 'Fraunces', Georgia, serif;
   --sans: 'Instrument Sans', 'Segoe UI', sans-serif;
   --mono: 'IBM Plex Mono', Consolas, monospace;
@@ -17,10 +22,32 @@
   background:
     radial-gradient(circle at top, rgba(213, 138, 58, 0.16), transparent 34%),
     linear-gradient(180deg, #fbf7f1, var(--page-bg));
+  background-attachment: fixed;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-bg: #13100e;
+    --panel: rgba(26, 21, 18, 0.82);
+    --line: rgba(213, 186, 158, 0.12);
+    --heading-color: #f7ede4;
+    --body: #d4c6bc;
+    --muted: #9e8e82;
+    --accent: #e08b3a;
+    --accent-rgb: 224, 139, 58;
+    --code-bg: rgba(224, 139, 58, 0.12);
+    --code-color: #fca855;
+    --card-shadow: rgba(0, 0, 0, 0.35);
+    background:
+      radial-gradient(circle at top, rgba(224, 139, 58, 0.12), transparent 38%),
+      linear-gradient(180deg, #1b1614, var(--page-bg));
+    background-attachment: fixed;
+  }
 }
 
 * {
@@ -43,11 +70,12 @@ input,
 textarea,
 select {
   font: inherit;
+  color: inherit;
 }
 
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid #c0782d;
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 
@@ -61,17 +89,17 @@ h2 {
   color: var(--heading-color);
   font-family: var(--heading);
   font-weight: 600;
-  line-height: 0.96;
+  line-height: 1.05;
   letter-spacing: -0.03em;
 }
 
 h1 {
-  font-size: clamp(3rem, 6vw, 5.5rem);
-  max-width: 10ch;
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  max-width: 22ch;
 }
 
 h2 {
-  font-size: clamp(1.35rem, 2vw, 2rem);
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
   line-height: 1.1;
 }
 
@@ -82,8 +110,9 @@ p {
 code {
   padding: 0.12rem 0.42rem;
   border-radius: 999px;
-  background: rgba(16, 63, 81, 0.08);
-  color: #103f51;
+  background: var(--code-bg);
+  color: var(--code-color);
   font-family: var(--mono);
-  font-size: 0.92em;
+  font-size: 0.88em;
+  word-break: break-word;
 }
