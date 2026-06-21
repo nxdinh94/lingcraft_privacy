@@ -10,6 +10,11 @@
   --code-bg: rgba(16, 63, 81, 0.08);
   --code-color: #103f51;
   --card-shadow: rgba(72, 52, 31, 0.06);
+  --ambient-left-color: rgba(196, 132, 63, 0.28);
+  --ambient-right-color: rgba(16, 74, 105, 0.25);
+  --scroll-gradient: linear-gradient(90deg, var(--accent), #c0782d);
+  --item-bg: rgba(118, 91, 61, 0.04);
+  --meta-bg: rgba(181, 142, 100, 0.08);
 
   --heading: 'Fraunces', Georgia, serif;
   --sans: 'Instrument Sans', 'Segoe UI', sans-serif;
@@ -19,11 +24,7 @@
   line-height: 1.6;
   font-weight: 400;
   color: var(--body);
-  background:
-    radial-gradient(circle at top, rgba(213, 138, 58, 0.16), transparent 34%),
-    linear-gradient(180deg, #fbf7f1, var(--page-bg));
   background-color: var(--page-bg);
-  background-attachment: fixed;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -44,11 +45,12 @@
     --code-bg: rgba(224, 139, 58, 0.12);
     --code-color: #fca855;
     --card-shadow: rgba(0, 0, 0, 0.35);
-    background:
-      radial-gradient(circle at top, rgba(224, 139, 58, 0.12), transparent 38%),
-      linear-gradient(180deg, #1b1614, var(--page-bg));
+    --ambient-left-color: rgba(196, 132, 63, 0.28);
+    --ambient-right-color: rgba(16, 74, 105, 0.25);
+    --scroll-gradient: linear-gradient(90deg, var(--accent), #c0782d);
+    --item-bg: rgba(118, 91, 61, 0.04);
+    --meta-bg: rgba(181, 142, 100, 0.08);
     background-color: var(--page-bg);
-    background-attachment: fixed;
   }
 }
 
@@ -58,12 +60,28 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--page-bg);
+  transition: background-color 300ms ease;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--page-bg);
+  background-image:
+    radial-gradient(circle at top, rgba(213, 138, 58, 0.16), transparent 34%),
+    linear-gradient(180deg, #fbf7f1, var(--page-bg));
+  background-attachment: fixed;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-image:
+      radial-gradient(circle at top, rgba(224, 139, 58, 0.12), transparent 38%),
+      linear-gradient(180deg, #1b1614, var(--page-bg));
+  }
 }
 
 button,
