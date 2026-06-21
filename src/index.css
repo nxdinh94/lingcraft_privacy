@@ -10,11 +10,6 @@
   --code-bg: rgba(16, 63, 81, 0.08);
   --code-color: #103f51;
   --card-shadow: rgba(72, 52, 31, 0.06);
-  --ambient-left-color: rgba(196, 132, 63, 0.28);
-  --ambient-right-color: rgba(16, 74, 105, 0.25);
-  --scroll-gradient: linear-gradient(90deg, var(--accent), #c0782d);
-  --item-bg: rgba(118, 91, 61, 0.04);
-  --meta-bg: rgba(181, 142, 100, 0.08);
 
   --heading: 'Fraunces', Georgia, serif;
   --sans: 'Instrument Sans', 'Segoe UI', sans-serif;
@@ -38,25 +33,20 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --page-bg: #090c15;
-    --panel: rgba(17, 24, 39, 0.85);
-    --line: rgba(148, 163, 184, 0.12);
-    --heading-color: #f8fafc;
-    --body: #cbd5e1;
-    --muted: #64748b;
-    --accent: #3b82f6;
-    --accent-rgb: 59, 130, 246;
-    --code-bg: rgba(59, 130, 246, 0.12);
-    --code-color: #60a5fa;
-    --card-shadow: rgba(0, 0, 0, 0.45);
-    --ambient-left-color: rgba(59, 130, 246, 0.22);
-    --ambient-right-color: rgba(6, 182, 212, 0.18);
-    --scroll-gradient: linear-gradient(90deg, #3b82f6, #06b6d4);
-    --item-bg: rgba(148, 163, 184, 0.04);
-    --meta-bg: rgba(59, 130, 246, 0.08);
+    --page-bg: #13100e;
+    --panel: rgba(26, 21, 18, 0.82);
+    --line: rgba(213, 186, 158, 0.12);
+    --heading-color: #f7ede4;
+    --body: #d4c6bc;
+    --muted: #9e8e82;
+    --accent: #e08b3a;
+    --accent-rgb: 224, 139, 58;
+    --code-bg: rgba(224, 139, 58, 0.12);
+    --code-color: #fca855;
+    --card-shadow: rgba(0, 0, 0, 0.35);
     background:
-      radial-gradient(circle at top, rgba(59, 130, 246, 0.15), transparent 42%),
-      linear-gradient(180deg, #0e1322, var(--page-bg));
+      radial-gradient(circle at top, rgba(224, 139, 58, 0.12), transparent 38%),
+      linear-gradient(180deg, #1b1614, var(--page-bg));
     background-color: var(--page-bg);
     background-attachment: fixed;
   }
